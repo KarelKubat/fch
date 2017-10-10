@@ -1,0 +1,73 @@
+------------------------------------------------------------------------------
+
+			         F C H
+
+		   Karel Kubat (karel@e-tunity.com)
+
+------------------------------------------------------------------------------
+
+
+What is it?
+-----------
+
+Fch ("file changer") is a simple interactive program which lets you change
+strings in files. It is just one of these simple but oh so handy programs
+(well, in my opinion it is).
+
+Fch must be invoked with at least three arguments and optional flags.
+When not enough arguments are present on the commandline, fch shows usage
+information and performs no actions. The arguments are the searchstring, the
+replacestring and one or more files to process. 
+
+Fch scans all the files for the occurrence of the
+searchstring. Normally fch searches literally for the occurrence of
+the searchstring in all the files which are given on the commandline,
+but when the flag -x is given, then the searchstring is interpreted as
+a regular expression. When a match is made, fch asks if this string
+should be changed into the replacestring. You may then answer with y,
+n, Y, N, A, q or ?.
+
+Answering with `y' will cause fch to change this string and to continue.
+Answering `n' will cause fch to leave this string as it is and to continue.
+The answers can also be given in capitals. In the case of `Y', fch will change
+all occurrences of the searchstring in the current file, and will ask again
+when the next file is processed. In the case of `N', fch will leave the
+remainder of the current file as it is and will ask again when the next file
+is processed.
+
+Answering with `A' will change all searchstrings in this file and in all next
+files; this option should obviously be used with caution.  Answering with `q'
+causes fch to abort the processing. Answering `?' will print a short list of
+possible answers.
+
+By default, fch shows only lines where the searchstring is found. These lines
+are prefixed with >>>. This behavior can be modified with the -a flag
+(all): when given, fch will display all the lines in the input file(s). 
+This is only useful for the usage of fch over fast tty lines, where a lot of
+scrolling is acceptable.
+
+Fch leaves backup versions of all changed files. These backup files
+have the same name as the original files but with `.bak' appended. The
+purpose of the backup files is that it should always be possible to
+retrieve the original version. Fch can be invoked with the flag `-r'
+if the creation of backup files should be suppressed. Obviously, this
+flag should be used with caution.
+
+
+Distribution and feedback
+-------------------------
+
+Fch can be copied and distributed freely, provided that the program is
+distributed in the orginal form: with sources and with documentation. There
+is no charge for fch. As with everything that's free, there is also
+absolutely no warranty (if you do a `fch -r a b /lib/*', tough luck). Fch is
+distributed under the FSF "Copyleft" policy, check out one of the COPYING
+files on your disk. In abbreviated form this reads: you're perfectly allowed 
+to redistribute the program, provided that you include all sources and
+documentation.
+
+As far as I know, fch is bug-free. If you encounter bugs, please don't hack
+around in the sources so you can post your personal own `improved' version: 
+rather, find a solution to the problem and e-mail me. 
+I will fix the bug (and include you in the credits list, if you like). 
+I can be reached at the above stated address.

@@ -1,0 +1,18 @@
+ChangeLog for fch
+-----------------
+
+Most recent changes are recorded at the top.
+
+2.07 [KK 2016-01-21] Porting-related.
+
+2.03 [KK 2005-05-26] Added VT100 bold/normal sequences and flag -e.
+
+2.02 [KK 2005-04-26] Fixed the Makefile to include libm.a in linkage.
+
+2.01 [KK 2004-06-25] ChangeLog (this file) added. Filename display now
+     stands out more. File names are only shown when the file contents
+     match the searchstring.
+
+2.00 [KK 2004-06-20] Regular expressions (flag -x) implemented.
+
+1.0* [KK 2002] First version(s).

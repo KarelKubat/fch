@@ -1,0 +1,11 @@
+
+-------------------------------------------------------------------------------
+			F C H  Construction
+-------------------------------------------------------------------------------
+Make what? Choose one of:
+  make fch		Local program construction
+  make install		Installation to EBINDIR (normally /usr/e/bin)
+  make clean		Cleanup of stale files
+  make dist		Creates archive in /tmp
+-------------------------------------------------------------------------------
+
