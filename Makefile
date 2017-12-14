@@ -17,7 +17,7 @@ NOMALLOC = -DNOMALLOC
 # SIMPLEKEYS = -DSIMPLEKEYS
 
 # Directory where the binary goes
-BINDIR = /usr/local/bin
+BINDIR ?= /usr/local/bin
 
 # Extension of executables, cygwin32 needs .exe. Real unixes should have this
 # line commented out.
@@ -27,7 +27,7 @@ BINDIR = /usr/local/bin
 ##############################################################################
 
 # Version number of this package, don't change:
-VER = 2.07
+VER = 2.08
 YRS = 1996ff.
 
 # Compilation flags, other than -c
