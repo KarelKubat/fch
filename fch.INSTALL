@@ -2,13 +2,7 @@
                         Installation Guide
                         ==================
 
-The easiest way to install fch is to get the RPM off
-http://public.e-tunity.com. The RPM requires the e-tunity utility
-library 'e-lib' (also available from the above mentioned site).
-
-To install fch from source, first make sure that you have the e-lib
-package available as a library and header. Then edit fch's
-Makefile. There are some variables at the top that might need
-tweaking.
-
-Next, just do a "make install" followed by "make clean". That's all.
+Just do a "make install" followed by "make clean". That's all.
+This will install "fch" into "/usr/local/bin" so you will need root
+permissions. To install into another location, do
+  BINDIR=/where/ever make install
